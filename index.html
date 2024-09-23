@@ -38,7 +38,7 @@
         <div class="grid grid-cols-3 gap-8 items-center p-4">
           <!-- First Column: Button (taking up half of its column space) -->
           <div class="flex justify-start">
-            <button class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Blog</button>
+            <button id="blogButton" onclick="changeTextAndRedirect()" class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Blog</button>
           </div>
       
           <!-- Second Column: Text with Picture -->
@@ -56,8 +56,8 @@
       
         <!-- Second Row -->
         <div class="flex justify-center space-x-4 p-4">
-          <button id="show-donation" class="bg-green-500 px-6 py-2 rounded hover:bg-green-600">Donations</button>
-          <button id="show-transaction-history" class="bg-red-500 px-6 py-2 rounded hover:bg-red-600">History</button>
+          <button id="show-donation" class="bg-gray-300 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">Donations</button>
+          <button id="show-transaction-history" class="bg-gray-300 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">History</button>
         </div>
       </nav>
       
@@ -86,7 +86,7 @@
             <!-- Input Field and Button -->
            
               <input type="text" id="input-add-money" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-              <button id="btn-add-money" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+              <button id="btn-add-money" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600  " onclick="openModal()">Donate Now</button>
             
           </div>
         </div>
@@ -119,7 +119,7 @@
           <!-- Input Field and Button -->
        
           <input type="text" id="input-add-money1" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-          <button id="btn-add-money1" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+          <button id="btn-add-money1" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600" onclick="openModal()">Donate Now</button>
         
       </div>
     </div>
@@ -154,12 +154,48 @@
           <!-- Input Field and Button -->
        
           <input type="text" id="input-add-money2" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-          <button id="btn-add-money2" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+          <button id="btn-add-money2" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600" onclick="openModal()">Donate Now</button>
         
       </div>
     </div>
   </div>
 </div>
+
+
+
+  <!-- Modal (Initially Hidden) -->
+  <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-lg max-w-lg w-full p-6 relative">
+        <!-- Close button -->
+        <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700" onclick="closeModal()">
+            &#10005; <!-- "X" symbol -->
+        </button>
+        
+        <!-- Modal Content -->
+        <h2 class="text-3xl font-bold text-center text-green-600 mb-4">Congrats!</h2>
+        
+        <!-- Image Section -->
+        <div class="flex justify-center mb-8">
+            <img src="images/coin.png" alt="Congrats Image" class="rounded-lg w-10 h-10">
+        </div>
+        
+        <!-- Text Section -->
+        <p class="text-lg text-center mb-2">You Have Donated for Humankind</p>
+        
+        <!-- Bold "Successfully" Section -->
+        <p class="text-lg font-bold text-center text-black-500 mb-6">Successfully!</p>
+        
+        <!-- Close Button -->
+        <div class="flex justify-center">
+            <button 
+                class="bg-gray-300 text-black px-6 py-2 rounded-lg hover:bg-white-600" 
+                onclick="closeModal()">Close Confirmation
+            </button>
+        </div>
+    </div>
+</div>
+
+
 
 
 

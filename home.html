@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+
+
+       <!-- Daisyui + Tailwindcss CDN -->
+
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Tailwind css -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+   tailwind.config = {
+     theme: {
+       extend: {
+         colors: {
+           clifford: '#da373d',
+         },
+         fontFamily: {
+           manrope: ['Manrope', 'sans-serif'],
+         },
+       },
+     },
+   }
+ </script>
+</head>
+
+
+
+<body>
+
+      <!-- Sticky Navbar -->
+      <nav class="sticky top-0 bg-gray-800 text-white p-4">
+        <!-- First Row -->
+        <div class="grid grid-cols-3 gap-8 items-center p-4">
+          <!-- First Column: Button (taking up half of its column space) -->
+          <div class="flex justify-start">
+            <button id="blogButton" onclick="changeTextAndRedirect()" class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Blog</button>
+          </div>
+      
+          <!-- Second Column: Text with Picture -->
+          <div class="flex items-center justify-center space-x-4">
+            <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
+            <span>Donate Bangladesh</span>
+          </div>
+      
+          <!-- Third Column: Picture with Text -->
+          <div class="flex items-center justify-end space-x-1">
+            <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
+            <span id="remain-balance">55550</span><span>BDT</span>
+          </div>
+        </div>
+      
+        <!-- Second Row -->
+       
+      </nav>
+      
+
+ 
+
+
+    <!-- javaScript Files -->
+
+    <script src="js/utilities.js"></script>
+    <script src="js/j1.js"></script>
+    <script src="js/j2.js"></script>
+    <script src="js/j3.js"></script>
+    <script src="js/f.js"></script>
+</body>
+</html>

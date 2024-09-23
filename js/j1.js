@@ -7,7 +7,7 @@ document.getElementById('btn-add-money')
         const currentBalace = getTextFieldValueById('remain-balance');
 
         if(addMoney<=0 || isNaN(addMoney)){
-            alert('Put a Valid Number');
+            alert('Invalid Donation amount');
             return;
         }
 
@@ -50,7 +50,7 @@ document.getElementById('btn-add-money')
         </p>
 
         <!-- Second Row: Current Date -->
-        <div class="text-lg font-bold ">${koyta_Baje_dise} ${currentTimeBST}</div>
+        <div class="text-lg font-bold ">Date : ${koyta_Baje_dise}   Time: ${currentTimeBST}</div>
     </div>
 </div>
 

@@ -7,7 +7,7 @@ document.getElementById('btn-add-money1')
         const currentBalace = getTextFieldValueById('remain-balance');
 
         if(addMoney<=0 || isNaN(addMoney)){
-            alert('Put a Valid Number');
+            alert('Invalid Donation amount');
             return;
         }
 
