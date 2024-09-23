@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5</title>
+
+
+       <!-- Daisyui + Tailwindcss CDN -->
+
+       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Tailwind css -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+   tailwind.config = {
+     theme: {
+       extend: {
+         colors: {
+           clifford: '#da373d',
+         },
+         fontFamily: {
+           manrope: ['Manrope', 'sans-serif'],
+         },
+       },
+     },
+   }
+ </script>
+</head>
+
+
+
+<body>
+
+      <!-- Sticky Navbar -->
+      <nav class="sticky top-0 bg-gray-800 text-white p-4">
+        <!-- First Row -->
+        <div class="grid grid-cols-3 gap-8 items-center p-4">
+          <!-- First Column: Button (taking up half of its column space) -->
+          <div class="flex justify-start">
+            <button class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Blog</button>
+          </div>
+      
+          <!-- Second Column: Text with Picture -->
+          <div class="flex items-center justify-center space-x-4">
+            <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
+            <span>Donate Bangladesh</span>
+          </div>
+      
+          <!-- Third Column: Picture with Text -->
+          <div class="flex items-center justify-end space-x-1">
+            <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
+            <span>5550</span><span>BDT</span>
+          </div>
+        </div>
+      
+        <!-- Second Row -->
+        <div class="flex justify-center space-x-4 p-4">
+          <button class="bg-green-500 px-6 py-2 rounded hover:bg-green-600">Donations</button>
+          <button class="bg-red-500 px-6 py-2 rounded hover:bg-red-600">History</button>
+        </div>
+      </nav>
+      
+
+  <!-- Content for testing sticky behavior -->
+  <div class="lg:px-48 lg:py-5">
+    <div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
+      <div class="container mx-auto py-4">
+        <div class="grid lg:grid-cols-2 gap-4">
+          <!-- First Column (Smaller Image with less right margin) -->
+          <div>
+            <img src="images/noakhali.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+          </div>
+          <!-- Second Column (Centered Content) -->
+          <div class="flex flex-col justify-center space-y-4 mr-5">
+            <!-- First Row (Image with Text and Gray Background) -->
+            <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+              <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+              <span class="text-lg mr-1" >0</span>
+              <span class="text-lg">BDT</span>
+            </div>
+            <!-- Second Row (Title) -->
+            <h2 class="text-2xl font-bold mb-2">Title</h2>
+            <!-- Third Row (Paragraph) -->
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <!-- Input Field and Button -->
+           
+              <input type="text" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+              <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- content 2 -->
+
+
+<div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
+  <div class="container mx-auto py-4">
+    <div class="grid lg:grid-cols-2 gap-4">
+      <!-- First Column (Smaller Image with less right margin) -->
+      <div>
+        <img src="images/feni.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+      </div>
+        <!-- Second Column (Centered Content) -->
+        <div class="flex flex-col justify-center space-y-4 mr-5">
+          <!-- First Row (Image with Text and Gray Background) -->
+          <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+            <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+            <span class="text-lg mr-1" >0</span>
+            <span class="text-lg">BDT</span>
+          </div>
+          <!-- Second Row (Title) -->
+          <h2 class="text-2xl font-bold mb-2">Title</h2>
+          <!-- Third Row (Paragraph) -->
+          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          <!-- Input Field and Button -->
+       
+          <input type="text" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+          <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- content 3 -->
+
+
+
+<div class="bg-gray-100 rounded-3xl border-4 border-gray-300">
+  <div class="container mx-auto py-4">
+    <div class="grid lg:grid-cols-2 gap-4">
+      <!-- First Column (Smaller Image with less right margin) -->
+      <div>
+        <img src="images/quota-protest.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+      </div>
+        <!-- Second Column (Centered Content) -->
+        <div class="flex flex-col justify-center space-y-4 mr-5">
+          <!-- First Row (Image with Text and Gray Background) -->
+          <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+            <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+            <span class="text-lg mr-1" >0</span>
+            <span class="text-lg">BDT</span>
+          </div>
+          <!-- Second Row (Title) -->
+          <h2 class="text-2xl font-bold mb-2">Title</h2>
+          <!-- Third Row (Paragraph) -->
+          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          <!-- Input Field and Button -->
+       
+          <input type="text" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+          <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Donate Now</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>
+   
+    <main>
+
+    </main>
+</body>
+</html>
