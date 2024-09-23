@@ -56,14 +56,14 @@
       
         <!-- Second Row -->
         <div class="flex justify-center space-x-4 p-4">
-          <button class="bg-green-500 px-6 py-2 rounded hover:bg-green-600">Donations</button>
-          <button class="bg-red-500 px-6 py-2 rounded hover:bg-red-600">History</button>
+          <button id="show-donation" class="bg-green-500 px-6 py-2 rounded hover:bg-green-600">Donations</button>
+          <button id="show-transaction-history" class="bg-red-500 px-6 py-2 rounded hover:bg-red-600">History</button>
         </div>
       </nav>
       
 
   <!-- Content for testing sticky behavior -->
-  <div class="lg:px-48 lg:py-5">
+  <div id="donation-form" class="lg:px-48 lg:py-5">
     <div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
       <div class="container mx-auto py-4">
         <div class="grid lg:grid-cols-2 gap-4">
@@ -80,7 +80,7 @@
               <span class="text-lg">BDT</span>
             </div>
             <!-- Second Row (Title) -->
-            <h2 class="text-2xl font-bold mb-2">Title</h2>
+            <h2 id="title1" class="text-2xl font-bold mb-2">Donate for Flood at Noakhali, Bangladesh</h2>
             <!-- Third Row (Paragraph) -->
             <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
             <!-- Input Field and Button -->
@@ -113,7 +113,7 @@
             <span class="text-lg">BDT</span>
           </div>
           <!-- Second Row (Title) -->
-          <h2 class="text-2xl font-bold mb-2">Title</h2>
+          <h2 id="title2" class="text-2xl font-bold mb-2">Donate for Flood Relief in Feni, Bangladesh</h2>
           <!-- Third Row (Paragraph) -->
           <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
           <!-- Input Field and Button -->
@@ -147,7 +147,8 @@
             <span class="text-lg">BDT</span>
           </div>
           <!-- Second Row (Title) -->
-          <h2 class="text-2xl font-bold mb-2">Title</h2>
+
+          <h2 id="title3" class="text-2xl font-bold mb-2">Aid for Injured in the Quota Movement</h2>
           <!-- Third Row (Paragraph) -->
           <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
           <!-- Input Field and Button -->
@@ -165,6 +166,20 @@
 
   </div>
    
+
+  <div id="transaction-section" class="hidden flex flex-col items-center justify-center text-center p-4">
+    <h3 class="text-2xl font-bold">History</h3>
+
+    <div id="transaction-container">
+
+    </div>
+
+   
+
+</div>
+
+
+
     <main>
 
     </main>
@@ -179,5 +194,6 @@
     <script src="js/j1.js"></script>
     <script src="js/j2.js"></script>
     <script src="js/j3.js"></script>
+    <script src="js/f.js"></script>
 </body>
 </html>

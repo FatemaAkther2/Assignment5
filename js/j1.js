@@ -26,11 +26,36 @@ document.getElementById('btn-add-money')
 
 
             // add to transaction history
-           /* const p = document.createElement('p');
-            p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance}`;
-            console.log(p); 
+            const div = document.createElement('div');
+           // div.classList.add('bg-yellow-300');
 
-            // should be a common function
-            document.getElementById('transaction-container').appendChild(p);*/
+           const variableText = getTextFieldValueById1('title1');
+
+           const koyta_Baje_dise = new Date().toLocaleDateString();
+
+           const currentTimeBST = new Date().toLocaleTimeString('en-US', { 
+            timeZone: 'Asia/Dhaka', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit', 
+            hour12: true 
+        });
+
+            div.innerHTML = `
+                <div class="bg-gray-100 border-4 border-gray-300 rounded-2xl p-6 px-20 mb-10">
+    <div class="grid grid-rows-2 gap-4">
+        <!-- First Row: Paragraph -->
+        <p class="text-lg font-bold">
+            ${addMoney} Taka is ${variableText}. 
+        </p>
+
+        <!-- Second Row: Current Date -->
+        <div class="text-lg font-bold ">${koyta_Baje_dise} ${currentTimeBST}</div>
+    </div>
+</div>
+
+            `
+
+            document.getElementById('transaction-container').appendChild(div);
 
     })
