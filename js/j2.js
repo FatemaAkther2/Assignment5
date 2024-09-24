@@ -43,12 +43,12 @@ document.getElementById('btn-add-money1')
                  <div class="bg-gray-100 border-4 border-gray-300 rounded-2xl p-6 px-20 mb-10">
      <div class="grid grid-rows-2 gap-4">
          <!-- First Row: Paragraph -->
-         <p class="text-lg font-bold">
+         <p class="text-lg font-bold"> 
              ${addMoney} Taka is ${variableText}. 
          </p>
  
          <!-- Second Row: Current Date -->
-         <div class="text-lg font-bold ">${koyta_Baje_dise} ${currentTimeBST}</div>
+         <div class="text-lg font-bold ">Date : ${koyta_Baje_dise}  Time : ${currentTimeBST}</div>
      </div>
  </div>
  

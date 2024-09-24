@@ -50,7 +50,7 @@ document.getElementById('btn-add-money')
         </p>
 
         <!-- Second Row: Current Date -->
-        <div class="text-lg font-bold ">Date : ${koyta_Baje_dise}   Time: ${currentTimeBST}</div>
+        <div class="text-lg font-bold ">Date : ${koyta_Baje_dise}   Time : ${currentTimeBST}</div>
     </div>
 </div>
 
