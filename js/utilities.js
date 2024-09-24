@@ -55,14 +55,14 @@ function changeColor(clickedButton) {
 }
 
 
+// Track whether on Blog or Home page
 
-function changeTextAndRedirect() {
-    // Change button text to 'Home'
-    const button = document.getElementById('blogButton');
-    button.textContent = 'Home';
+function goToHomePage() {
+    // Redirect to the home.html page
+    window.location.href = 'home.html'; // Make sure home.html is in the same directory
+}
 
-    // Redirect to a new HTML file (e.g., "home.html") after 1 second delay
-    setTimeout(function() {
-        window.location.href = 'home.html'; // Replace 'home.html' with the actual file path
-    }, 1000);
+function goToIndexPage() {
+    // Redirect to the index.html page
+    window.location.href = 'index.html'; // Make sure index.html is in the same directory
 }
