@@ -33,36 +33,38 @@
 <body>
 
       <!-- Sticky Navbar -->
-      <nav class="sticky top-0  text-black  bg-[#F9F7F3] ">
+      <nav class="sticky top-0 text-black bg-[#F9F7F3]/30 backdrop-blur-xl z-50">
         <!-- First Row -->
-        <div>
-          <div class="grid grid-cols-3 gap-8 items-center p-4 lg:mr-36 lg:ml-36 ">
-            <!-- First Column: Button (taking up half of its column space) -->
-            <div class="flex justify-start">
-              <button id="blogButton" onclick="goToHomePage()" class="lg:w-1/2 bg-lime-500 px-6 py-2 rounded hover:bg-lime-600 font-bold">Blog</button>
+        <div class="bg-[#F9F7F3]">
+            <div class="grid grid-cols-3 gap-8 items-center p-4 lg:mr-36 lg:ml-36">
+                <!-- First Column: Button (taking up half of its column space) -->
+                <div class="flex justify-start">
+                    <button id="blogButton" onclick="goToHomePage()" class="lg:w-1/2 bg-lime-500 px-6 py-2 rounded hover:bg-lime-600 font-bold">Blog</button>
+                </div>
+    
+                <!-- Second Column: Text with Picture -->
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
+                    <span class="font-bold">Donate Bangladesh</span>
+                </div>
+    
+                <!-- Third Column: Picture with Text -->
+                <div class="flex items-center justify-end space-x-1">
+                    <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
+                    <span id="remain-balance" class="font-bold">55550</span><span class="font-bold">BDT</span>
+                </div>
             </div>
-        
-            <!-- Second Column: Text with Picture -->
-            <div class="flex items-center justify-center  space-x-4">
-              <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
-              <span class="font-bold">Donate Bangladesh</span>
-            </div>
-        
-            <!-- Third Column: Picture with Text -->
-            <div class="flex items-center justify-end space-x-1">
-              <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
-              <span id="remain-balance" class="font-bold">55550</span><span class="font-bold">BDT</span>
-            </div>
-          </div>
         </div>
-      
+    
         <!-- Second Row -->
-       <div class="bg-white">
-        <div class="flex justify-center space-x-4 p-4">
-          <button id="show-donation" class="bg-gray-200 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">Donations</button>
-          <button id="show-transaction-history" class="bg-gray-200 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">History</button>
+        <div class="">
+            <div class="flex justify-center space-x-4 p-4">
+                <button id="show-donation" class="bg-gray-200 text-black font-bold px-6 py-2 rounded" onclick="changeColor(this)">Donations</button>
+                <button id="show-transaction-history" class="bg-gray-200 text-black font-bold px-6 py-2 rounded" onclick="changeColor(this)">History</button>
+            </div>
         </div>
-       </div>
+    </nav>
+    
       </nav>
       
 
