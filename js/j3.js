@@ -7,6 +7,8 @@ document.getElementById('btn-add-money2')
 
         const currentBalace = getTextFieldValueById('remain-balance');
 
+        
+
         if(addMoney<=0 || isNaN(addMoney)){
             alert('Invalid Donation amount');
             return;
@@ -16,6 +18,8 @@ document.getElementById('btn-add-money2')
             alert('You do not have Enough Money');
             return;
         }
+
+        openModal();
         
         const balance = getTextFieldValueById('account-balance2');
             const newBalance = balance + addMoney;

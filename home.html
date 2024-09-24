@@ -29,96 +29,86 @@
 </head>
 
 
-
 <body>
-
-      <!-- Sticky Navbar -->
-      <nav class="sticky top-0 bg-gray-800 text-white p-4">
+    <!-- Sticky Navbar -->
+    <nav class="sticky top-0 text-black bg-[#F9F7F3] z-10 shadow-md">
         <!-- First Row -->
-        <div class="grid grid-cols-3 gap-8 items-center p-4">
-          <!-- First Column: Button (taking up half of its column space) -->
-          <div class="flex justify-start">
-            <button id="homeButton" onclick="goToIndexPage()" class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Home</button>
+        <div>
+            <div class="grid grid-cols-3 gap-8 items-center p-4 lg:mr-36 lg:ml-36 ">
+              <!-- First Column: Button (taking up half of its column space) -->
+              <div class="flex justify-start">
+                <button id="homeButton" onclick="goToIndexPage()" class="lg:w-1/2 bg-lime-500 px-6 py-2 rounded hover:bg-lime-600 font-bold">Home</button>
+              </div>
+          
+              <!-- Second Column: Text with Picture -->
+              <div class="flex items-center justify-center  space-x-4">
+                <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
+                <span class="font-bold">Donate Bangladesh</span>
+              </div>
+          
+              <!-- Third Column: Picture with Text -->
+              <div class="flex items-center justify-end space-x-1">
+                <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
+                <span id="remain-balance" class="font-bold">55550</span><span class="font-bold">BDT</span>
+              </div>
+            </div>
           </div>
-      
-          <!-- Second Column: Text with Picture -->
-          <div class="flex items-center justify-center space-x-4">
-            <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
-            <span>Donate Bangladesh</span>
-          </div>
-      
-          <!-- Third Column: Picture with Text -->
-          <div class="flex items-center justify-end space-x-1">
-            <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
-            <span id="remain-balance">55550</span><span>BDT</span>
-          </div>
-        </div>
-      
-        <!-- Second Row -->
-       
-      </nav>
-      
-
- 
-
+    </nav>
 
     <div class="text-center mt-10">
-      <button class="btn text-white bg-black  mb-5 font-bold rounded-3xl"> Frequently ask questions <span><i class="fa-solid fa-arrow-right"></i></span>
-      </button>
-      <h1 class="text-3xl lg:text-4xl font-extrabold mb-5 text-[#212121]">Feel Free to Ask Anything</h1>
+        <h1 class="text-3xl lg:text-4xl font-extrabold mb-5 text-[#212121]">Important FAQ</h1>
     </div>
-  
+
     <div class="hero overflow-hidden">
         <div class="hero-content flex-col lg:flex-row">
-          <img src="images/FAQ.png" class="w-3/4 lg:2/4 rounded-lg shadow-2xl" />
-          <div class="space-y-4">
-            <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-xl font-medium"> What is the DOM (Document Object Model)?</div>
-                <div class="collapse-content">
-                  <p>The DOM is a programming interface for web documents that represents the structure of a document as a tree of objects. Each node in the tree corresponds to a part of the document, such as elements, attributes, or text. This allows programming languages, like JavaScript, to interact with and manipulate the content, structure, and style of web pages.</p>
+            <img src="images/FAQ.png" class="w-3/4 lg:2/4 rounded-lg shadow-2xl" />
+            <div class="space-y-4">
+                <!-- FAQ Questions -->
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the DOM (Document Object Model)?</div>
+                    <div class="collapse-content">
+                        <p>The DOM is a programming interface for web documents that represents the structure of a document as a tree of objects. Each node in the tree corresponds to a part of the document, such as elements, attributes, or text. This allows programming languages, like JavaScript, to interact with and manipulate the content, structure, and style of web pages.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                  <p>You can select an element from the DOM using various methods provided by the document object. Common methods include getElementById(id), which selects an element by its unique ID, getElementsByClassName(className), which returns a collection of elements with a specified class, and querySelector(selector), which allows you to use CSS selectors to select elements.</p>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can select an element from the DOM using various methods provided by the document object. Common methods include getElementById(id), which selects an element by its unique ID, getElementsByClassName(className), which returns a collection of elements with a specified class, and querySelector(selector), which allows you to use CSS selectors to select elements.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                  <p>Event delegation is a technique in JavaScript that involves attaching a single event listener to a parent element rather than individual child elements. This allows events triggered on child elements to bubble up to the parent, where they can be handled. It's useful because it reduces memory usage and enhances performance, especially when dealing with a large number of child elements.</p>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique in JavaScript that involves attaching a single event listener to a parent element rather than individual child elements. This allows events triggered on child elements to bubble up to the parent, where they can be handled. It's useful because it reduces memory usage and enhances performance, especially when dealing with a large number of child elements.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
-                  <p>You can manipulate an element's attributes using the setAttribute(attribute, value) method to set a specific attribute or directly modify the property, like element.src = 'newImage.png'. For styles, you can change CSS properties by accessing the style object of an element, like element.style.backgroundColor = 'blue', allowing dynamic changes to the appearance of the element.</p>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can manipulate an element's attributes using the setAttribute(attribute, value) method to set a specific attribute or directly modify the property, like element.src = 'newImage.png'. For styles, you can change CSS properties by accessing the style object of an element, like element.style.backgroundColor = 'blue', allowing dynamic changes to the appearance of the element.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium"> What is the difference between innerHTML and textContent in the DOM?</div>
-                <div class="collapse-content">
-                  <p>innerHTML retrieves or sets the HTML markup contained within an element, allowing for the insertion of HTML tags. In contrast, textContent retrieves or sets only the text content of an element, ignoring any HTML tags. This distinction is important for ensuring that HTML structure is maintained or safely manipulated.</p>
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title text-xl font-medium">What is the difference between innerHTML and textContent in the DOM?</div>
+                    <div class="collapse-content">
+                        <p>innerHTML retrieves or sets the HTML markup contained within an element, allowing for the insertion of HTML tags. In contrast, textContent retrieves or sets only the text content of an element, ignoring any HTML tags. This distinction is important for ensuring that HTML structure is maintained or safely manipulated.</p>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
- 
+    </div>
 
-
-    <!-- javaScript Files -->
-
+    <!-- JavaScript Files -->
     <script src="js/utilities.js"></script>
     <script src="js/j1.js"></script>
     <script src="js/j2.js"></script>
     <script src="js/j3.js"></script>
     <script src="js/f.js"></script>
 </body>
+
 </html>

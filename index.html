@@ -33,135 +33,124 @@
 <body>
 
       <!-- Sticky Navbar -->
-      <nav class="sticky top-0 bg-gray-800 text-white p-4">
+      <nav class="sticky top-0  text-black  bg-[#F9F7F3] ">
         <!-- First Row -->
-        <div class="grid grid-cols-3 gap-8 items-center p-4">
-          <!-- First Column: Button (taking up half of its column space) -->
-          <div class="flex justify-start">
-            <button id="blogButton" onclick="goToHomePage()" class="lg:w-1/2 bg-red-500 px-6 py-2 rounded hover:bg-red-600">Blog</button>
-          </div>
-      
-          <!-- Second Column: Text with Picture -->
-          <div class="flex items-center justify-center space-x-4">
-            <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
-            <span>Donate Bangladesh</span>
-          </div>
-      
-          <!-- Third Column: Picture with Text -->
-          <div class="flex items-center justify-end space-x-1">
-            <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
-            <span id="remain-balance">55550</span><span>BDT</span>
+        <div>
+          <div class="grid grid-cols-3 gap-8 items-center p-4 lg:mr-36 lg:ml-36 ">
+            <!-- First Column: Button (taking up half of its column space) -->
+            <div class="flex justify-start">
+              <button id="blogButton" onclick="goToHomePage()" class="lg:w-1/2 bg-lime-500 px-6 py-2 rounded hover:bg-lime-600 font-bold">Blog</button>
+            </div>
+        
+            <!-- Second Column: Text with Picture -->
+            <div class="flex items-center justify-center  space-x-4">
+              <img src="images/logo.png" alt="Image 1" class="w-8 h-8">
+              <span class="font-bold">Donate Bangladesh</span>
+            </div>
+        
+            <!-- Third Column: Picture with Text -->
+            <div class="flex items-center justify-end space-x-1">
+              <img src="images/coin.png" alt="Image 2" class="w-5 h-5 rounded-full">
+              <span id="remain-balance" class="font-bold">55550</span><span class="font-bold">BDT</span>
+            </div>
           </div>
         </div>
       
         <!-- Second Row -->
+       <div class="bg-white">
         <div class="flex justify-center space-x-4 p-4">
-          <button id="show-donation" class="bg-gray-300 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">Donations</button>
-          <button id="show-transaction-history" class="bg-gray-300 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">History</button>
+          <button id="show-donation" class="bg-gray-200 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">Donations</button>
+          <button id="show-transaction-history" class="bg-gray-200 text-black font-bold px-6 py-2 rounded " onclick="changeColor(this)">History</button>
         </div>
+       </div>
       </nav>
       
 
   <!-- Content for testing sticky behavior -->
-  <div id="donation-form" class="lg:px-48 lg:py-5">
+  <div id="donation-form" class="lg:px-48 lg:py-5 mt-5">
     <div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
-      <div class="container mx-auto py-4">
-        <div class="grid lg:grid-cols-2 gap-4">
-          <!-- First Column (Smaller Image with less right margin) -->
-          <div>
-            <img src="images/noakhali.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
-          </div>
-          <!-- Second Column (Centered Content) -->
-          <div class="flex flex-col justify-center space-y-4 mr-5">
-            <!-- First Row (Image with Text and Gray Background) -->
-            <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
-              <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
-              <span class="text-lg mr-1" id="account-balance">0</span>
-              <span class="text-lg">BDT</span>
+        <div class="container mx-auto py-4">
+            <div class="grid lg:grid-cols-2 gap-4 ml-8 mr-8 mb-5 mt-4 lg:ml-5">
+                <!-- First Column (Smaller Image with less right margin) -->
+                <div>
+                    <img src="images/noakhali.png" alt="Image" class="w-full h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+                </div>
+                <!-- Second Column (Centered Content) -->
+                <div class="flex flex-col justify-center space-y-4 lg:ml-10">
+                    <!-- First Row (Image with Text and Gray Background) -->
+                    <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+                        <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+                        <span class="text-lg mr-1 font-bold" id="account-balance">0</span>
+                        <span class="text-lg font-bold">BDT</span>
+                    </div>
+                    <!-- Second Row (Title) -->
+                    <h2 id="title1" class="text-2xl font-bold mb-2">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <!-- Third Row (Paragraph) -->
+                    <p class="text-lg">The recent floods in Noakhali, Bangladesh, have caused significant destruction, displacing countless families.</p>
+                    <!-- Input Field and Button -->
+                    <input type="text" id="input-add-money" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+                    <button id="btn-add-money" class="bg-lime-500 text-black font-bold px-6 py-2 rounded-lg hover:bg-lime-600">Donate Now</button>
+                </div>
             </div>
-            <!-- Second Row (Title) -->
-            <h2 id="title1" class="text-2xl font-bold mb-2">Donate for Flood at Noakhali, Bangladesh</h2>
-            <!-- Third Row (Paragraph) -->
-            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <!-- Input Field and Button -->
-           
-              <input type="text" id="input-add-money" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-              <button id="btn-add-money" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600  " onclick="openModal()">Donate Now</button>
-            
-          </div>
         </div>
-      </div>
     </div>
 
-
-<!-- content 2 -->
-
-
-<div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
-  <div class="container mx-auto py-4">
-    <div class="grid lg:grid-cols-2 gap-4">
-      <!-- First Column (Smaller Image with less right margin) -->
-      <div>
-        <img src="images/feni.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
-      </div>
-        <!-- Second Column (Centered Content) -->
-        <div class="flex flex-col justify-center space-y-4 mr-5">
-          <!-- First Row (Image with Text and Gray Background) -->
-          <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
-            <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
-            <span class="text-lg mr-1" id="account-balance1" >0</span>
-            <span class="text-lg">BDT</span>
-          </div>
-          <!-- Second Row (Title) -->
-          <h2 id="title2" class="text-2xl font-bold mb-2">Donate for Flood Relief in Feni, Bangladesh</h2>
-          <!-- Third Row (Paragraph) -->
-          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-          <!-- Input Field and Button -->
-       
-          <input type="text" id="input-add-money1" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-          <button id="btn-add-money1" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600" onclick="openModal()">Donate Now</button>
-        
-      </div>
+    <!-- content 2 -->
+    <div class="bg-gray-100 rounded-3xl border-4 border-gray-300 mb-8">
+        <div class="container mx-auto py-4">
+            <div class="grid lg:grid-cols-2 gap-4 ml-8 mr-8 mb-5 mt-4 lg:ml-5">
+                <!-- First Column (Smaller Image with less right margin) -->
+                <div>
+                    <img src="images/feni.png" alt="Image" class="w-full h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+                </div>
+                <!-- Second Column (Centered Content) -->
+                <div class="flex flex-col justify-center space-y-4 lg:ml-10">
+                    <!-- First Row (Image with Text and Gray Background) -->
+                    <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+                        <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+                        <span class="text-lg mr-1 font-bold" id="account-balance1">0</span>
+                        <span class="text-lg font-bold">BDT</span>
+                    </div>
+                    <!-- Second Row (Title) -->
+                    <h2 id="title2" class="text-2xl font-bold mb-2">Donate for Flood Relief in Feni, Bangladesh</h2>
+                    <!-- Third Row (Paragraph) -->
+                    <p class="text-lg">Feni has been severely impacted by the devastating floods, leaving many families struggling to survive.</p>
+                    <!-- Input Field and Button -->
+                    <input type="text" id="input-add-money1" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+                    <button id="btn-add-money1" class="bg-lime-500 px-6 py-2 rounded-lg hover:bg-lime-600 text-black font-bold">Donate Now</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <!-- content 3 -->
+    <div class="bg-gray-100 rounded-3xl border-4 border-gray-300">
+        <div class="container mx-auto py-4">
+            <div class="grid lg:grid-cols-2 gap-4 ml-8 mr-8 mb-5 mt-4 lg:ml-5">
+                <!-- First Column (Smaller Image with less right margin) -->
+                <div>
+                    <img src="images/quota-protest.png" alt="Image" class="w-full h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
+                </div>
+                <!-- Second Column (Centered Content) -->
+                <div class="flex flex-col justify-center space-y-4 lg:ml-10">
+                    <!-- First Row (Image with Text and Gray Background) -->
+                    <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
+                        <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
+                        <span class="text-lg mr-1 font-bold" id="account-balance2">0</span>
+                        <span class="text-lg font-bold">BDT</span>
+                    </div>
+                    <!-- Second Row (Title) -->
+                    <h2 id="title3" class="text-2xl font-bold mb-2">Aid for Injured in the Quota Movement</h2>
+                    <!-- Third Row (Paragraph) -->
+                    <p class="text-lg">The Quota Movement in Bangladesh has sparked significant protests advocating for equitable job opportunities and reform in the public recruitment system.</p>
+                    <!-- Input Field and Button -->
+                    <input type="text" id="input-add-money2" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg px-4 py-2 w-full">
+                    <button id="btn-add-money2" class="bg-lime-500 text-black font-bold px-6 py-2 rounded-lg hover:bg-lime-600" >Donate Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-<!-- content 3 -->
-
-
-
-<div class="bg-gray-100 rounded-3xl border-4 border-gray-300">
-  <div class="container mx-auto py-4">
-    <div class="grid lg:grid-cols-2 gap-4">
-      <!-- First Column (Smaller Image with less right margin) -->
-      <div>
-        <img src="images/quota-protest.png" alt="Image" class="w-3/4 h-auto object-cover rounded-2xl lg:ml-6 mr-auto">
-      </div>
-        <!-- Second Column (Centered Content) -->
-        <div class="flex flex-col justify-center space-y-4 mr-5">
-          <!-- First Row (Image with Text and Gray Background) -->
-          <div class="flex items-center mb-4 bg-gray-300 p-4 rounded-lg mr-56">
-            <img src="images/coin.png" alt="Small Image" class="w-8 h-8 mr-1 rounded-full">
-            <span class="text-lg mr-1" id="account-balance2" >0</span>
-            <span class="text-lg">BDT</span>
-          </div>
-          <!-- Second Row (Title) -->
-
-          <h2 id="title3" class="text-2xl font-bold mb-2">Aid for Injured in the Quota Movement</h2>
-          <!-- Third Row (Paragraph) -->
-          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-          <!-- Input Field and Button -->
-       
-          <input type="text" id="input-add-money2" placeholder="Write something..." class="border border-gray-300 rounded-lg px-4 py-2 w-full">
-          <button id="btn-add-money2" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600" onclick="openModal()">Donate Now</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
   <!-- Modal (Initially Hidden) -->
   <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden items-center justify-center z-50">
@@ -203,8 +192,10 @@
   </div>
    
 
-  <div id="transaction-section" class="hidden flex flex-col items-center justify-center text-center p-4">
-    <h3 class="text-2xl font-bold">History</h3>
+  <div id="transaction-section" class="hidden flex flex-col items-center justify-center text-center p-4 mt-5">
+    <div class="bg-gray-200 border-1 border-black rounded-lg p-4 px-4 mb-8">
+      <h3 class="text-2xl font-bold">History of Donations</h3>
+  </div>
 
     <div id="transaction-container">
 

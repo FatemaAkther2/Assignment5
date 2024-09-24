@@ -15,7 +15,7 @@ document.getElementById('btn-add-money')
             alert('You do not have Enough Money');
             return;
         }
-        
+        openModal();
         const balance = getTextFieldValueById('account-balance');
             const newBalance = balance + addMoney;
 
