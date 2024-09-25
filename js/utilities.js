@@ -2,6 +2,7 @@
 
 function getInputFieldValueById(id){
     const inputValue = document.getElementById(id).value;
+    document.getElementById(id).value= '';
     if(isNaN(inputValue)) return '-1';
 
     const inputNumber = parseFloat(inputValue);
